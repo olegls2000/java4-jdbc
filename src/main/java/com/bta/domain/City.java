@@ -1,20 +1,16 @@
 package com.bta.domain;
 
-public class Country {
+public class City {
     private long id;
     private String name;
     private long population;
-    private City capital;
+    private long area;
 
-    public Country(String name, long population) {
-        this.name = name;
-        this.population = population;
-    }
-
-    public Country(long id, String name, long population) {
+    public City(long id, String name, long population, long area) {
         this.id = id;
         this.name = name;
         this.population = population;
+        this.area = area;
     }
 
     public long getId() {
@@ -41,21 +37,21 @@ public class Country {
         this.population = population;
     }
 
-    public City getCapital() {
-        return capital;
+    public long getArea() {
+        return area;
     }
 
-    public void setCapital(City capital) {
-        this.capital = capital;
+    public void setArea(long area) {
+        this.area = area;
     }
 
     @Override
     public String toString() {
-        return "Country{" +
+        return "City{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", population=" + population +
-                ", capital=" + capital +
+                ", area=" + area +
                 '}';
     }
 }
